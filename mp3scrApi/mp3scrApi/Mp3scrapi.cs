@@ -857,7 +857,6 @@ namespace mp3scrApi
             string baseMp3Name = myUri.Segments[myUri.Segments.Length - 1]; // The MP3 name including the extension
             string mp3Ext = System.IO.Path.GetExtension(myUri.LocalPath); // The extension including the period
             baseMp3Name = System.Web.HttpUtility.UrlDecode(baseMp3Name, System.Text.Encoding.UTF8).Substring(0, System.Web.HttpUtility.UrlDecode(baseMp3Name, System.Text.Encoding.UTF8).Length - mp3Ext.Length); // The name without the extension
- // The name without the extension
 
             SyndicationItem si = new SyndicationItem();
             si.Id = guidPrefix + baseMp3Name; // guid
@@ -1139,4 +1138,5 @@ namespace mp3scrApi
         }
     }
 }
+
 
